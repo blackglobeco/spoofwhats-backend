@@ -1,9 +1,9 @@
-services:
-  - type: web
-    name: spoofwhats-backend
-    runtime: docker
-    plan: free
-    healthCheckPath: /status
-    envVars:
-      - key: PORT
-        value: 8080
+[build]
+builder = "DOCKERFILE"
+
+[deploy]
+startCommand = "./whats-spoofing"
+healthcheckPath = "/status"
+healthcheckTimeout = 30
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
