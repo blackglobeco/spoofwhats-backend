@@ -1,4 +1,4 @@
-FROM golang:1.22-alpine AS builder
+FROM golang:1.25-alpine AS builder
 
 # modernc.org/sqlite is pure Go — no CGO or gcc needed
 WORKDIR /app
