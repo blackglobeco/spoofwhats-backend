@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: spoofwhats-backend
+    runtime: docker
+    plan: free
+    healthCheckPath: /status
+    envVars:
+      - key: PORT
+        value: 8080
